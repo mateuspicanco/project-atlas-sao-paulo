@@ -1,0 +1,932 @@
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=c771ad9f6a07225ab13744bca219721493634ca14be21e77a15f8019f2e451a2
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=baddbbac62adbbfcbfbd5d02b455fe3e396fca0690ada1e8a027c911556c14ba
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=49ac0ede25f75d7c17410e60b3de8a44bf368c39950c3fbf60afd9a7d028ee0c
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=0ca10b264c707b04a5bc57a6a74cfd109fad7363e180d31af8efd2ee1c0639ff
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=c1cc863b3703d6cca952738aba8aab2dee5d1cd8941952ba3024abed2faa8c0b
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=af5e241af1407fd282aa28909d3182bc3d431e2141ca0e2380344568f456a484
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=ef4593ada39580b7ceb65fa34bfda4316414ab42c96498484a7a861b0cab975e
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=6c3d46ffb0702508bf9fbec25726bbe5482a15fb4318fe278d15d820704c0b0f
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=773385e3e624dd08ad44863c264dcceeb03129ca367446828e7f258cf6e6d2c4
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=44900fc223bfd55305f1735ffc167c1c9ea25a876efff36e016ae503b16df73b
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=327b5366617a9714b6a189c8959f970d85b45e71bb0c750a58075f93e61be438
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=d338886aaaf40fd7cbd6cd88c6eadaaa6393c4099db3bf73ab0957aac3946165
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Requirement already satisfied: inflection in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 1)) (0.5.1)
+Requirement already satisfied: apache-sedona in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.0.1)
+Requirement already satisfied: geopandas in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.9.0)
+Requirement already satisfied: nb_black in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.0.7)
+Requirement already satisfied: memory_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 5)) (0.58.0)
+Requirement already satisfied: line_profiler in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.3.0)
+Requirement already satisfied: unidecode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 7)) (1.2.0)
+Requirement already satisfied: unicode in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 8)) (2.8)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Requirement already satisfied: shapely in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (1.7.1)
+Collecting pyspark<3.1.0
+  Using cached pyspark-3.0.2-py2.py3-none-any.whl
+Requirement already satisfied: py4j==0.10.9 in /opt/conda/lib/python3.8/site-packages (from pyspark<3.1.0->apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (0.10.9)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: fiona>=1.8 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.8.20)
+Requirement already satisfied: pyproj>=2.2.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (3.1.0)
+Requirement already satisfied: click-plugins>=1.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.1.1)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Requirement already satisfied: cligj>=0.5 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (0.7.2)
+Requirement already satisfied: munch in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.5.0)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Requirement already satisfied: black>='19.3' in /opt/conda/lib/python3.8/site-packages (from nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (21.6b0)
+Requirement already satisfied: pathspec<1,>=0.8.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.8.1)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Requirement already satisfied: mypy-extensions>=0.4.3 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.4.3)
+Requirement already satisfied: regex>=2020.1.8 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (2021.4.4)
+Requirement already satisfied: toml>=0.10.1 in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (0.10.2)
+Installing collected packages: pyspark
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed pyspark-3.0.2
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=4252e28a60a6fb33af807952dc76fc6f591685d881892b6b68267e420a0ca27b
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=d08f0fec791ab84934c86506339e67c0cccabba65e62780ec388c0d2191c913c
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=80f8de5c9096c372c3d7f62888bdfe4fc4d5ce5aa454372657f7921e353a057d
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0
+Collecting inflection
+  Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Collecting apache-sedona
+  Downloading apache_sedona-1.0.1-py3-none-any.whl (67 kB)
+Collecting geopandas
+  Downloading geopandas-0.9.0-py2.py3-none-any.whl (994 kB)
+Collecting nb_black
+  Downloading nb_black-1.0.7.tar.gz (4.8 kB)
+Collecting memory_profiler
+  Downloading memory_profiler-0.58.0.tar.gz (36 kB)
+Collecting line_profiler
+  Downloading line_profiler-3.3.0-cp38-cp38-manylinux2010_x86_64.whl (65 kB)
+Collecting unidecode
+  Downloading Unidecode-1.2.0-py2.py3-none-any.whl (241 kB)
+Collecting unicode
+  Downloading unicode-2.8-py2.py3-none-any.whl (14 kB)
+Requirement already satisfied: chardet in /opt/conda/lib/python3.8/site-packages (from -r ../configs/dependencies/dataprep_requirements.txt (line 9)) (4.0.0)
+Requirement already satisfied: attrs in /opt/conda/lib/python3.8/site-packages (from apache-sedona->-r ../configs/dependencies/dataprep_requirements.txt (line 2)) (20.3.0)
+Collecting pyspark<3.1.0
+  Downloading pyspark-3.0.2.tar.gz (204.8 MB)
+Collecting shapely
+  Downloading Shapely-1.7.1-cp38-cp38-manylinux1_x86_64.whl (1.0 MB)
+Collecting py4j==0.10.9
+  Downloading py4j-0.10.9-py2.py3-none-any.whl (198 kB)
+Collecting pyproj>=2.2.0
+  Downloading pyproj-3.1.0-cp38-cp38-manylinux2010_x86_64.whl (6.6 MB)
+Collecting fiona>=1.8
+  Downloading Fiona-1.8.20-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (15.4 MB)
+Requirement already satisfied: pandas>=0.24.0 in /opt/conda/lib/python3.8/site-packages (from geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.2.3)
+Requirement already satisfied: certifi in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2020.12.5)
+Requirement already satisfied: click>=4.0 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (7.1.2)
+Collecting munch
+  Downloading munch-2.5.0-py2.py3-none-any.whl (10 kB)
+Collecting cligj>=0.5
+  Downloading cligj-0.7.2-py3-none-any.whl (7.1 kB)
+Requirement already satisfied: six>=1.7 in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.15.0)
+Collecting click-plugins>=1.0
+  Downloading click_plugins-1.1.1-py2.py3-none-any.whl (7.5 kB)
+Requirement already satisfied: setuptools in /opt/conda/lib/python3.8/site-packages (from fiona>=1.8->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (49.6.0.post20210108)
+Requirement already satisfied: python-dateutil>=2.7.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2.8.1)
+Requirement already satisfied: pytz>=2017.3 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (2021.1)
+Requirement already satisfied: numpy>=1.16.5 in /opt/conda/lib/python3.8/site-packages (from pandas>=0.24.0->geopandas->-r ../configs/dependencies/dataprep_requirements.txt (line 3)) (1.20.1)
+Requirement already satisfied: IPython>=0.13 in /opt/conda/lib/python3.8/site-packages (from line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (7.21.0)
+Requirement already satisfied: prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (3.0.17)
+Requirement already satisfied: decorator in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.4.2)
+Requirement already satisfied: pickleshare in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.5)
+Requirement already satisfied: backcall in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: traitlets>=4.2 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (5.0.5)
+Requirement already satisfied: jedi>=0.16 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.18.0)
+Requirement already satisfied: pexpect>4.3 in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (4.8.0)
+Requirement already satisfied: pygments in /opt/conda/lib/python3.8/site-packages (from IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (2.8.1)
+Requirement already satisfied: parso<0.9.0,>=0.8.0 in /opt/conda/lib/python3.8/site-packages (from jedi>=0.16->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.8.1)
+Requirement already satisfied: ptyprocess>=0.5 in /opt/conda/lib/python3.8/site-packages (from pexpect>4.3->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.7.0)
+Requirement already satisfied: wcwidth in /opt/conda/lib/python3.8/site-packages (from prompt-toolkit!=3.0.0,!=3.0.1,<3.1.0,>=2.0.0->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.5)
+Requirement already satisfied: ipython-genutils in /opt/conda/lib/python3.8/site-packages (from traitlets>=4.2->IPython>=0.13->line_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 6)) (0.2.0)
+Requirement already satisfied: psutil in /opt/conda/lib/python3.8/site-packages (from memory_profiler->-r ../configs/dependencies/dataprep_requirements.txt (line 5)) (5.8.0)
+Collecting black>='19.3'
+  Downloading black-21.6b0-py3-none-any.whl (140 kB)
+Collecting regex>=2020.1.8
+  Downloading regex-2021.4.4-cp38-cp38-manylinux2014_x86_64.whl (733 kB)
+Collecting pathspec<1,>=0.8.1
+  Downloading pathspec-0.8.1-py2.py3-none-any.whl (28 kB)
+Collecting toml>=0.10.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting mypy-extensions>=0.4.3
+  Downloading mypy_extensions-0.4.3-py2.py3-none-any.whl (4.5 kB)
+Requirement already satisfied: appdirs in /opt/conda/lib/python3.8/site-packages (from black>='19.3'->nb_black->-r ../configs/dependencies/dataprep_requirements.txt (line 4)) (1.4.4)
+Building wheels for collected packages: pyspark, memory-profiler, nb-black
+  Building wheel for pyspark (setup.py): started
+  Building wheel for pyspark (setup.py): finished with status 'done'
+  Created wheel for pyspark: filename=pyspark-3.0.2-py2.py3-none-any.whl size=205186687 sha256=2720ccb5185bfbe5667540bf727b35f842cea14338d7ea1a165bba8bf6b06a55
+  Stored in directory: /home/jovyan/.cache/pip/wheels/79/f9/b5/deac3c0c2cb1b00cea51109823d12fc5f2fe05b0f63d4342ff
+  Building wheel for memory-profiler (setup.py): started
+  Building wheel for memory-profiler (setup.py): finished with status 'done'
+  Created wheel for memory-profiler: filename=memory_profiler-0.58.0-py3-none-any.whl size=30183 sha256=25ec0ed88337e496256f4459f2a397ff93ee3b7bd0a337189626ecee415e9e3c
+  Stored in directory: /home/jovyan/.cache/pip/wheels/6a/37/3e/d9e8ebaf73956a3ebd2ee41869444dbd2a702d7142bcf93c42
+  Building wheel for nb-black (setup.py): started
+  Building wheel for nb-black (setup.py): finished with status 'done'
+  Created wheel for nb-black: filename=nb_black-1.0.7-py3-none-any.whl size=5279 sha256=812482bae7a588b1f4bfaadd644d688db5bcf49e1a13ef78fff5d0d75d11d469
+  Stored in directory: /home/jovyan/.cache/pip/wheels/a6/5e/1e/a15614d6ea220d070043db3b650d73a8b4938aefd520496c11
+Successfully built pyspark memory-profiler nb-black
+Installing collected packages: toml, regex, py4j, pathspec, mypy-extensions, munch, cligj, click-plugins, shapely, pyspark, pyproj, fiona, black, unidecode, unicode, nb-black, memory-profiler, line-profiler, inflection, geopandas, apache-sedona
+  Attempting uninstall: pyspark
+    Found existing installation: pyspark 3.1.1
+    Can't uninstall 'pyspark'. No files were found to uninstall.
+Successfully installed apache-sedona-1.0.1 black-21.6b0 click-plugins-1.1.1 cligj-0.7.2 fiona-1.8.20 geopandas-0.9.0 inflection-0.5.1 line-profiler-3.3.0 memory-profiler-0.58.0 munch-2.5.0 mypy-extensions-0.4.3 nb-black-1.0.7 pathspec-0.8.1 py4j-0.10.9 pyproj-3.1.0 pyspark-3.0.2 regex-2021.4.4 shapely-1.7.1 toml-0.10.2 unicode-2.8 unidecode-1.2.0

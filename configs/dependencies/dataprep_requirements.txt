@@ -1,0 +1,9 @@
+inflection
+apache-sedona
+geopandas
+nb_black
+memory_profiler
+line_profiler
+unidecode
+unicode
+chardet
