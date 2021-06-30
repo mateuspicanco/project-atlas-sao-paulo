@@ -20,7 +20,8 @@ The main technologies used in this project were:
 
 The project is broken down by different levels of granularities of Geospatial references. These are:
 
-1. Street / Zip Code level
-2. Subdistrict (Neighborhood)
-3. District
-4. Macro Regions
+1. Census Sectors (Street blocks)
+2. Streets (Zip code) 
+3. Area of Ponderation (aggregation of sectors)
+4. Neighborhoods
+5. Districts
