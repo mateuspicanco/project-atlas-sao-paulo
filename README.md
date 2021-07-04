@@ -31,3 +31,5 @@ The project is broken down by different levels of granularities of Geospatial re
 The map below iilustrates this relationship:
 
 ![Example map for Levels of Interest](references/img/example_layers.png)
+
+> Note: The outer red line indicates the `districts`. The green line represents the `neighborhoods`. The blue lines indicate `zipcodes`, as so on.
