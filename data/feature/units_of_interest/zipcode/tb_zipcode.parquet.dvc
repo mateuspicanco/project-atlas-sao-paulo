@@ -1,0 +1,4 @@
+outs:
+- md5: 1acf1cbbe1020ea96d332259444672a1
+  size: 22512988
+  path: tb_zipcode.parquet
