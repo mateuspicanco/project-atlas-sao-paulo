@@ -1,0 +1,4 @@
+outs:
+- md5: 2ff3291efdb951e5d570b9dbc042cba9
+  size: 2704
+  path: SIRGAS_SHP_estacaometro_point.shp
