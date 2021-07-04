@@ -1,0 +1,5 @@
+outs:
+- md5: 9980a76e4afd52e45356c71eb0e2e99a.dir
+  size: 18012190
+  nfiles: 2
+  path: zipcodes

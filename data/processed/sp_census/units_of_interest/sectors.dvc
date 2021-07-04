@@ -1,0 +1,5 @@
+outs:
+- md5: 5f3b1e076bd21a9d1cb4da6aee42865b.dir
+  size: 12329533
+  nfiles: 2
+  path: sectors
