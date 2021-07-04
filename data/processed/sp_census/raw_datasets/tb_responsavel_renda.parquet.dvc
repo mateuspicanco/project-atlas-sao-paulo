@@ -1,0 +1,4 @@
+outs:
+- md5: 56c46ecfef4635ff9da611c7d953c74f
+  size: 3376629
+  path: tb_responsavel_renda.parquet

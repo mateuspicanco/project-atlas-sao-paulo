@@ -1,0 +1,4 @@
+outs:
+- md5: 174f6ac04a0b61129b55df98e32727a9
+  size: 786838
+  path: tb_basico.parquet

@@ -1,0 +1,4 @@
+outs:
+- md5: 1eb6c09113ab3920cdf549b7e04d3208
+  size: 1710742
+  path: tb_entorno01.parquet

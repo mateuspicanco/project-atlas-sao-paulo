@@ -1,0 +1,4 @@
+outs:
+- md5: 50397787c181e1c6984dac0d9b08c4f4
+  size: 4008082
+  path: tb_pessoa_renda.parquet

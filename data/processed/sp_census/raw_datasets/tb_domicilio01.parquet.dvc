@@ -1,0 +1,4 @@
+outs:
+- md5: 7fd4656f4e90009f17fa0ff2b0dc8b24
+  size: 1915707
+  path: tb_domicilio01.parquet

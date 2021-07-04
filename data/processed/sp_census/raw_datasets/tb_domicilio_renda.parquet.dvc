@@ -1,0 +1,4 @@
+outs:
+- md5: 743be904cca2f3aaaa7050e2936939c2
+  size: 317427
+  path: tb_domicilio_renda.parquet

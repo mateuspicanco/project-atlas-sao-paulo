@@ -1,0 +1,4 @@
+outs:
+- md5: a69ac29b7866510b70119dc05cd39c1c
+  size: 1132949
+  path: tb_pessoa01.parquet

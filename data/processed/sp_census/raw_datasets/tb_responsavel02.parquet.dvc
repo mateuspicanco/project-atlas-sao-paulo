@@ -1,0 +1,4 @@
+outs:
+- md5: f68572e3939961b89d15149e47819c1b
+  size: 1741889
+  path: tb_responsavel02.parquet
