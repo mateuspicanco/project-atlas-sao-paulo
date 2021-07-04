@@ -1,0 +1,4 @@
+outs:
+- md5: 6f02e27370caecef727d836eb2c30d36
+  size: 17927
+  path: tb_district_iptu_no_geo.parquet

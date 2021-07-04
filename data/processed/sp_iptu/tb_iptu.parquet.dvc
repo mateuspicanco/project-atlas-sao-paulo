@@ -1,0 +1,4 @@
+outs:
+- md5: a6fd23b2ad46baf78746824e9dff1c55
+  size: 37247661
+  path: tb_iptu.parquet

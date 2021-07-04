@@ -1,0 +1,4 @@
+outs:
+- md5: 1f32806c27bfe0feaeb9a9ae6f71aca7
+  size: 41777
+  path: tb_ponderation_iptu_no_geo.parquet

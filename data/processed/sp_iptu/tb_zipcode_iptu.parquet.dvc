@@ -1,0 +1,4 @@
+outs:
+- md5: 3642275a86dae38ce4e217691e7099ae
+  size: 10312860
+  path: tb_zipcode_iptu.parquet

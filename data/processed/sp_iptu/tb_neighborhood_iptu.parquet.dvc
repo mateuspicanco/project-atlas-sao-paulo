@@ -1,0 +1,4 @@
+outs:
+- md5: baab9e6c3cdb9ccb0383415cbc630aa3
+  size: 830594
+  path: tb_neighborhood_iptu.parquet

@@ -1,0 +1,4 @@
+outs:
+- md5: 082dfff637eb18cd0a33878ff8ed6a77
+  size: 1518782
+  path: tb_ponderation_iptu.parquet

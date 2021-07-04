@@ -1,0 +1,4 @@
+outs:
+- md5: 4724124d1054d228b32c06f33afa808e
+  size: 167207
+  path: tb_neighborhood_iptu_no_geo.parquet
