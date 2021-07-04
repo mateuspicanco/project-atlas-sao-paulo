@@ -16,7 +16,7 @@ A breakdown of the data sources currently used and their original references can
 The main technologies used in this project were:
 1. Data processing: `Apache Spark`, `pyspark`;
 2. Geospatial data wrangling: `Apache Sedona`, `geopandas`, `fiona`;
-3. Storage and Metadata: `AWS S3`, `AWS Glue`, `AWS CloudFormation`;
+3. Data Versioning: `dvc`
 
 # Project Architecture 
 
@@ -30,4 +30,4 @@ The project is broken down by different levels of granularities of Geospatial re
 
 The map below iilustrates this relationship:
 
-![Example map for Levels of Interest](references/img/layers_map_example.png)
+![Example map for Levels of Interest](references/img/example_layers.png)
