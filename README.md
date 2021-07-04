@@ -1,12 +1,10 @@
-# :earth_americas:Project Atlas - São Paulo
-Geospatial features designed and built by [@mateuspicanco](mailto:mlimagom@gmail.com).
+# Project Atlas - São Paulo :earth_americas:
 
-# Project Description
-**Project Atlas - São Paulo** is a Data Science and Engineering initiative that aims at developing *relevant and curated Geospatial features* about the city of São Paulo, Brazil. It's ultimate use is varied, but it is mainly focused on Machine Learning tasks, such as Real State price prediction.s 
+**Project Atlas - São Paulo** is a Data Science and Engineering initiative that aims at developing *relevant and curated Geospatial features* about the city of São Paulo, Brazil. It's ultimate use is varied, but it is mainly focused on Machine Learning tasks, such as Real State price prediction.
 
 It aggregates several attributes from many public data sources at different *levels of interest*, which can be used to match geospatially referenced data (`lat`,`long` pairs for example).
 
-A breakdown of the data sources currently used and their original references can be found below, but the official documentation of the project contains the full breakdowns.
+A breakdown of the data sources currently used and their original references can be found below, but the official documentation of the project contains the full list of data sources.
 
 # Data sources
 - [GeoSampa](http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx): geospatial data exploration tool provided by the São Paulo's Department of Urban Development;
@@ -23,8 +21,8 @@ The main technologies used in this project were:
 
 The project is broken down by different levels of granularities of Geospatial references. These are:
 
-1. Census Sectors (Street blocks)
-2. Streets (Zip code) 
-3. Area of Ponderation (aggregation of sectors)
-4. Neighborhoods
-5. Districts
+1. **Census Sectors** (Street blocks)
+2. Streets (**Zip code**) 
+3. **Area of Ponderation** (aggregation of sectors)
+4. **Neighborhoods**
+5. **Districts**
