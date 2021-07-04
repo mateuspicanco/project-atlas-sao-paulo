@@ -109,8 +109,6 @@ def rotate_xticks(ax, rotation):
     for item in ax.get_xticklabels():
         item.set_rotation(rotation)
 
-
-
 def get_file_encoding(filename, is_partial=False):
     if is_partial == True:
         with open(filename, "rb") as input_file:
@@ -121,6 +119,42 @@ def get_file_encoding(filename, is_partial=False):
         with open(filename, "rb") as input_file:
             print(chardet.detect(input_file.read()))
 
+def sort_dataframe_columns(df, leading_col=None):
+
+    col_order = sorted(df.columns)
+
+    if leading_col is not None:
+        col_order.remove(leading_col)
+        col_order.insert(0, leading_col)
+
+    df = df.select(*col_order)
+
+    return df
+
+def load_geospatial_file(file_path, spark_session):
+    shape_rdd = ShapefileReader.readToGeometryRDD(sc=spark_session, inputPath=file_path)
+
+    df = Adapter.toDf(shape_rdd, spark_session)
+
+    return df
+
+def save_geospatial_file(df, file_path):
+
+    df = gpd.GeoDataFrame(df.toPandas())
+
+    df.to_parquet(file_path)
+
+    return True
+
+def convert_geometry(df, geometry_col, input_crs, output_crs):
+    df = df.withColumn(
+        geometry_col,
+        F.expr(
+            f"ST_FlipCoordinates(ST_Transform({geometry_col}, '{input_crs}', '{output_crs}'))"
+        ),
+    )
+
+    return df
 
 def rank_feature(df, col, ascending=True):
     """Helper function to generate rank-based features given a column in PySpark dataframe
