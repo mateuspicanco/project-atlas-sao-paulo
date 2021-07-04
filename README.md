@@ -10,6 +10,7 @@ A breakdown of the data sources currently used and their original references can
 - [GeoSampa](http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx): geospatial data exploration tool provided by the São Paulo's Department of Urban Development;
 - [IBGE](https://downloads.ibge.gov.br/): raw datasets from the 2010 Census conducted by the Brazilian Institute of Geography and Statistics;
 - [Infocidade](http://infocidade.prefeitura.sp.gov.br/): multiple sources from the city of São Paulo's local government entities;
+- [São Paulo Open Data Portal](http://dados.prefeitura.sp.gov.br/pt_PT/): multiple curated data sources from the city of São Paulo;
 
 # Technologies used
 The main technologies used in this project were:
@@ -21,8 +22,12 @@ The main technologies used in this project were:
 
 The project is broken down by different levels of granularities of Geospatial references. These are:
 
-1. **Census Sectors** (Street blocks)
-2. Streets (**Zip code**) 
-3. **Area of Ponderation** (aggregation of sectors)
-4. **Neighborhoods**
-5. **Districts**
+1. **Census Sectors**: the lowest level of census information, that can be roughly approximated to a street block;
+2. **Zip code** different from a block, the zip code can be roughly approximated to a streets;
+3. **Area of Ponderation**: areas of ponderation are aggregations of census sectors, which vary in size. The level of interest is important as some of the data sources in the project are only described in such level;
+4. **Neighborhoods**: neighborhoods are not formally defined and place in between `districts` and `areas of ponderation` when it comes to size;
+5. **Districts**: districts are administrative regions in the city of São Paulo, which is defined formally by law (with that, their boundaries do not change that much over time);
+
+The map below iilustrates this relationship:
+
+![Example map for Levels of Interest](references/img/layers_map_example.png)
